@@ -1,18 +1,14 @@
-# 基于视觉变换器的图像字幕生成
+# 基于Vision Transformer的图像字幕生成
 
 
-变换器是一种强大的模型，利用注意力机制。 <br>
-最初由[《注意力就是一切》](https://arxiv.org/pdf/1706.03762.pdf) 提出，并用于序列到序列任务。<br>
-后来，[《一张图片值得16x16个词：大规模图像识别中的变换器》](https://arxiv.org/pdf/2010.11929.pdf) 提出了视觉变换器ViT，它直接在图像上应用变换器。<br>
+Transformer是一种强大的模型，利用注意力机制。 <br>
+最初由[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf) 提出，并用于序列到序列任务。<br>
+
+后来[AN IMAGE IS WORTH 16X16 WORDS:
+TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE](https://arxiv.org/pdf/2010.11929.pdf) 提出了视觉变换器ViT，它直接在图像上应用Transformer。<br>
+
 在这个任务中，我们使用预训练的```google/vit-base-patch16-224``` 预训练的ViT作为编码器，以及一个变换器解码器。
 
-
-标准变换器块 <br>
-<img src="./img/Transformer.png" alt="transformer" width="400"/>
-___
-视觉变换器ViT <br>
-<img src="./img/ViT.png" alt="ViT" width="500"/>
-___
 
 
 
@@ -83,21 +79,21 @@ unzip google.zip
     ├── str2list.py
     └── str2list_json.py
 ```
-build_vocab.py: 构建词汇表，从数据集中提取单词，并创建映射。
-captioning_DIY.py: 包含生成图像字幕的主要模型代码。
-dataloader.py: 负责加载和预处理数据集。
-download.sh: Shell脚本，用于下载数据集。
-Gradio.py: 创建Gradio界面，用于模型交互。
-resize.py: 调整图像大小，用于数据预处理。
-sampler.py: 用于从模型中采样和生成预测。
-ViT_example.py: 包含ViT的示例代码。
+`build_vocab.py`: 构建词汇表，从数据集中提取单词，并创建映射。  
+`captioning_DIY.py`: 包含生成图像字幕的主要模型代码。  
+`dataloader.py`: 负责加载和预处理数据集。  
+`download.sh`: Shell脚本，用于下载数据集。  
+`Gradio.py`: 创建Gradio界面，用于模型交互。  
+`resize.py`: 调整图像大小，用于数据预处理。  
+`sampler.py`: 用于从模型中采样和生成预测。  
+`ViT_example.py`: 包含ViT的示例代码。  
 
 <br>
 
 ## 三.安装指南
-1. 克隆仓库：`git clone https://github.com/yumingj/DeepFashion-MultiModal.git`
+1. 克隆仓库：`git clone git@github.com:abinzzz/Image-Captioning.git`
 2. 安装依赖：`pip install -r requirements.txt`
-3. 下载预训练模型和数据集：运行 `download.sh`和从[这里]([DeepFashion数据集](https://github.com/yumingj/DeepFashion-MultiModal))下载
+3. 下载预训练模型和数据集：运行 `download.sh`并在[这里]([DeepFashion数据集](https://github.com/yumingj/DeepFashion-MultiModal))下载
 
 ## 四.运行
 
