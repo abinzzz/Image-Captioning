@@ -1,0 +1,2 @@
+image,选择模型,output,flag,username,timestamp
+"{""path"":""flagged/image/c1c50b408d6359f5a167/WechatIMG942.jpg"",""url"":""http://127.0.0.1:7860/file=/private/var/folders/2d/_w2lzrzn7vd9th092l6hz2j40000gn/T/gradio/852e4baf1f351e410c411daa3af285794dcdd6e4/WechatIMG942.jpg"",""size"":70359,""orig_name"":""WechatIMG942.jpg"",""mime_type"":""""}",ViT + Transformer Decoder,Please submit a picture.,,,2023-12-29 02:41:27.167439
